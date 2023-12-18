@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    {% for post in post %}
+    <h1>{{post.title}}</h1>
+    <p>{{post.content}}</p>
+
+    <div>
+        <a href="{% url 'post' post.id %}">Подробнее</a>
+        <a href="{% url 'update' post.id %}">Redact</a>
+        <a href="{% url 'delete' post.id %}">delete</a>
+    </div>
+
+    <hr>
+    {% endfor%}
+    <h1><a href="{% url 'create' %}">Create</a></h1>
+
+</body>
+</html>

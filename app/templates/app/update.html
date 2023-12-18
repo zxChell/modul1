@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <p>Name</p>
+            <input type="text" name="name" value="{{ i.name }}"/>
+        </div>
+        <div>
+            <p>Age</p>
+            <input type="number" name="age" value="{{ i.age }}"/>
+        </div>
+        <button>Send</button>
+    </form>
+</body>
+</html>
